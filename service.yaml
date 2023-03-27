@@ -4,10 +4,10 @@ metadata:
   name: simple-bank-system
 spec:
   selector:
-    app: simple-bank-system
+    app: simple-bank-system 
   ports:
-    - name: http
-      protocol: TCP
-      port: 
-      targetPort: 
-  type: NodePort
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+  type: LoadBalancer
+
