@@ -2,7 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: simple-bank-system
- spec:
-   containers:
-   ports:
-   - containerPort: 30000
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-bank-system
+  template:
+    metadata:
+      labels:
+        app: simple-bank-system
+    spec:
+      containers:
+      - name: simple-bank-system
+        image: sumangalakm/project_3:latest
+        ports:
+        - containerPort: 3000
+
