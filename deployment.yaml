@@ -1,0 +1,8 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-bank-system
+ spec:
+   containers:
+   ports:
+   - containerPort: 30000
