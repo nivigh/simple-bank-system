@@ -16,5 +16,5 @@ spec:
       - name: simple-bank-system
         image: sumangalakm/project_3:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 8000
 
